@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+
 # Script used for updating host records for namecheap.com domain names
-# !) Set the Nameservers to "Namecheap BasicDNS"
-# 2) In the Advanced DNS tab enable Dynamic DNS
+# 1) Set the Nameservers to "Namecheap BasicDNS"
+# 2) In the "Advanced DNS" tab enable Dynamic DNS
 # 3) Update the config dictonary below
-# 4) Setup crontab "* * * * * <path-to-script>/ddns.py
+# 4) Setup crontab: * * * * * <path-to-script>/ddns.py
+
 config = {
     "<domain1.com>" : {
         "hosts" : ["@", "www"],
@@ -34,6 +36,4 @@ for domain,data in config.items():
               "&ip=" + \
               ip.decode("utf-8")
         
-        response = get(url)
-        print(response.content)
-
+        get(url)
