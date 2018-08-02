@@ -10,7 +10,7 @@ config = {
     "<domain1.com>" : {
         "hosts" : ["@", "www"],
         "password" : "<dyanmic-DNS-password-for-domain1>"
-    }
+    },
     "<domain2.com>" : {
         "hosts" : ["@", "www"],
         "password" : "<dynamic-DNS-password-for-domain2>"
